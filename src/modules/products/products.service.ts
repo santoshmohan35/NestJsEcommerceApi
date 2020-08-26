@@ -1,22 +1,10 @@
 import { Injectable } from '@nestjs/common';
+import { PrismaService } from 'src/prisma.service';
 
 @Injectable()
 export class ProductsService {
-    getAllProducts(): any {
-        return {
-            products: [{
-                id: 1,
-                name: 'Casio Watch',
-                category: 'watch',
-                brand: 'Casio',
-                url: 97
-            }, {
-                id: 1,
-                name: 'Reebook Shoes',
-                category: 'shoes',
-                brand: 'Reebok',
-                url: 97
-            }]
-        }
+    constructor(private prisma: PrismaService){}
+    getAllProducts() {
+        return this.prisma.product.findMany();
     }
 }

@@ -3,7 +3,7 @@
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  url = "***"
 }
 
 generator client {
@@ -12,8 +12,8 @@ generator client {
 
 model User {
   id        Int     @default(autoincrement()) @id
-  email     String?  @unique
-  firstname String
+  email     String  @unique
+  firstname String?
   lastname  String
 }
 

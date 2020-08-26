@@ -21,7 +21,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Ecommerce Api developed with stacks including Nodejs, NestJs, Prisma.
 
 ## Installation
 

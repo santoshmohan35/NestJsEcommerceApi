@@ -11,6 +11,7 @@ import { ProductsService } from './modules/products/products.service';
 import { OrdersService } from './modules/orders/orders.service';
 import { CheckoutService } from './modules/checkout/checkout.service';
 import { UsersModule } from './modules/users/users.module';
+import { PrismaService } from './prisma.service';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { UsersModule } from './modules/users/users.module';
   providers: [
     AppService,
     CartService,
+    PrismaService,
     ProductsService,
     OrdersService,
     CheckoutService
