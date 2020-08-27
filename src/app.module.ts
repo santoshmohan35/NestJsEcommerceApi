@@ -12,6 +12,7 @@ import { OrdersService } from './modules/orders/orders.service';
 import { CheckoutService } from './modules/checkout/checkout.service';
 import { UsersModule } from './modules/users/users.module';
 import { PrismaService } from './prisma.service';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -20,7 +21,8 @@ import { PrismaService } from './prisma.service';
     CheckoutModule,
     OrdersModule,
     SharedModule,
-    UsersModule
+    UsersModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [
