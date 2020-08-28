@@ -8,16 +8,16 @@ import { RolesGuard } from 'src/auth/roles.guard';
 export class UsersController {
     constructor(private readonly userService: UsersService) { }
 
-    @Get()
+    // @Get()
     // @UseGuards(JwtAuthGuard, RolesGuard)
-    @Roles('Admin')
-    async getAllUsers() {
-        return await this.userService.getAllUsers();
-    }
+    // @Roles('Admin')
+    // async getAllUsers() {
+    //     return await this.userService.getAllUsers();
+    // }
 
-    @Post()
-    async createUser(@Body() user:Users) {
-        return await this.userService.createUser(user);
-    }
+    // @Post()
+    // async createUser(@Body() user:Users) {
+    //     return await this.userService.createUser(user);
+    // }
 
 }

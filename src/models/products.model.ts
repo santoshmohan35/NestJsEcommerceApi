@@ -1,10 +1,23 @@
+import { ApiProperty } from '@nestjs/swagger';
 export class Products {
+    
     id: number;
+    @ApiProperty()
     name: string;
+
+    @ApiProperty()
     description: string;
+
+    @ApiProperty()
     price: number;
+
+    @ApiProperty()
     imageUrl: string;
+    
+    @ApiProperty()
     productBrandId: number;
+
+    @ApiProperty()
     productTypeId: number;
 }
 
@@ -30,4 +43,12 @@ export class ProductBrand{
     id: number;
     name: string;
     Product: Products[];
+}
+
+export class PaginationData{
+    totalItems: number;
+    currentItems: number;
+    slNo: number;
+    data: Products[];
+    pageNo: number;
 }

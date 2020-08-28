@@ -5,7 +5,7 @@ import { Roles } from 'src/auth/roles.decorator';
 import { JwtAuthGuard } from 'src/auth/jwt.auth.guard';
 
 @Controller('products')
-@UseGuards(JwtAuthGuard)
+// @UseGuards(JwtAuthGuard)
 export class ProductsController {
     constructor(private readonly productService: ProductsService) { }
 
