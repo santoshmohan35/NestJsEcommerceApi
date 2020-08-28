@@ -7,12 +7,11 @@ import { PrismaService } from 'src/prisma.service';
 import { UsersModule } from 'src/modules/users/users.module';
 import { PassportModule } from '@nestjs/passport';
 import { jwtConstants } from './constant';
-import { LocalStrategy } from './local.strategy';
 import { JwtStrategy } from './jwt.strategy';
 import { JwtAuthGuard } from './jwt.auth.guard';
 
 @Module({
-  providers: [AuthService,PrismaService, UsersService, JwtAuthGuard, LocalStrategy, JwtStrategy],
+  providers: [AuthService,PrismaService, UsersService, JwtAuthGuard, JwtStrategy],
   imports: [
     UsersModule,
     PassportModule.register({ defaultStrategy: 'jwt' }),
